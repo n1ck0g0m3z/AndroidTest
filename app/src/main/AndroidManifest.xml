@@ -17,7 +17,7 @@
         </activity>
         <activity android:name=".SampleActivity" />
         <activity android:name=".IntentActivity" />
-        <activity android:name=".util.UIActivity"></activity>
+        <activity android:name=".UIActivity"></activity>
     </application>
 
 </manifest>
