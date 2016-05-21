@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
 
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class IntentActivity extends AppCompatActivity {
@@ -23,20 +24,23 @@ public class IntentActivity extends AppCompatActivity {
         intent.putExtra(SampleActivity.EXTRA_HELLO_STRING,"hello world");
         startActivity(intent);
     }
+
     @OnClick(R.id.btnTest2)
     void onBtnTest2(){
         Uri uri = Uri.parse("tel:090-222-333");
         Intent intent=new Intent(Intent.ACTION_DIAL,uri);
         startActivity(intent);
     }
+
     @OnClick(R.id.btnTest3)
     void onBtnTest3(){
         Intent intent = new Intent(IntentActivity.this,SampleActivity.class);
         intent.putExtra(SampleActivity.EXTRA_HELLO_STRING,"hello world");
         startActivityForResult(intent,REQUEST_CODE_FOR_SAMPLE);
     }
+
     @OnClick(R.id.btnTest4)
-    void onBtntest4(){
+    void onBtnTest4(){
         Intent intent = new Intent(IntentActivity.this, UIActivity.class);
         startActivity(intent);
     }
@@ -45,6 +49,7 @@ public class IntentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intent);
+        ButterKnife.bind(this);
     }
 
     @Override
