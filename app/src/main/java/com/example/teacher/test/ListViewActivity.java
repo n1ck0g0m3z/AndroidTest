@@ -33,6 +33,8 @@ public class ListViewActivity extends BaseActivity {
 
         CustomerAdapter adapter = new CustomerAdapter(this);
 
+        adapter.add(list);
+        
         mL_Sample.setAdapter(adapter);
 
     }
