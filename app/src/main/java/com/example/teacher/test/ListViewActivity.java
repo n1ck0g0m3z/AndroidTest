@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class ListViewActivity extends BaseActivity {
 
@@ -26,6 +27,7 @@ public class ListViewActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view);
+        ButterKnife.bind(this);
 
         List<CustomerDto> list = createTestCustomer();
 
@@ -55,6 +57,7 @@ public class ListViewActivity extends BaseActivity {
 
         public CustomerAdapter(Context context){
             _context = context;
+            _list = new ArrayList<CustomerDto>();
             _layoutInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
 
