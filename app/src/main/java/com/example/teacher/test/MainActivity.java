@@ -25,6 +25,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @OnClick(R.id.btnListView)
+    void onBtnListView(){
+        Intent intent = new Intent(MainActivity.this,ListViewActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

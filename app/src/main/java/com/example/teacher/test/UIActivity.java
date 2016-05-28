@@ -7,7 +7,7 @@ import com.example.teacher.test.R;
 
 import butterknife.OnClick;
 
-public class UIActivity extends AppCompatActivity {
+public class UIActivity extends BaseActivity {
 
     @OnClick(R.id.btnIntent)
     void onBtnIntent(){
